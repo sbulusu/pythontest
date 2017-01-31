@@ -1,0 +1,11 @@
+.cache/
+**/__pycache__/
+.git/
+.idea/
+*.pyc
+logs/
+*.egg-info
+*.orig
+*result.xml
+test_results/
+
