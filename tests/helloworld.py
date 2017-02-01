@@ -8,3 +8,7 @@ def test2():
 
 def test3():
     assert 3 == 3
+
+
+def test4():
+    assert 3 == 3
