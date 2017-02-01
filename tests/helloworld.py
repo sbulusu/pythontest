@@ -20,3 +20,7 @@ def test5():
 
 def test6():
     assert 3 == 3
+
+
+def test7():
+    assert 3 == 3
