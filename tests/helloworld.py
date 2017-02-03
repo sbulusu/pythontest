@@ -28,3 +28,7 @@ def test7():
 
 def test8():
     assert 3 == 3
+
+
+def test9():
+    assert 3 == 3
