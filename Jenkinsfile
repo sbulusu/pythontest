@@ -15,14 +15,8 @@ node {
     sh 'pip install -r requirements.txt'
     sh 'python setup.py install'
 
-  stage 'Lint'
-    step([$class: 'CheckStylePublisher', canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''])
-
   stage 'Test'
     sh 'py.test tests'
     step([$class: 'JUnitResultArchiver', testResults: 'result.xml'])
 
-  stage 'Cleanup'
-    sh 'rm -rf venv'
-    step([$class: 'GitHubCommitStatusSetter', errorHandlers: [[$class: 'ChangingBuildStatusErrorHandler', result: 'FAILURE']]])
 }
