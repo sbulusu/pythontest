@@ -16,7 +16,3 @@ def test4():
 
 def test5():
     assert 3 == 3
-
-
-def test6():
-    assert 3 == 3
